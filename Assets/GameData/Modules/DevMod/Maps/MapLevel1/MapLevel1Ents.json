@@ -1,0 +1,15 @@
+{
+  "MapSource": "Modules/DevMod/Maps/MapLevel1/MapLevel1Ents.png",
+  "ColorMappings": [
+    {
+      "MapID": 0,
+      "ResRefID": "EntPlayer",
+      "Color": { "r": 255, "g": 0, "b": 0, "a": 255 }
+    },
+    {
+      "MapID": 1,
+      "ResRefID": "EntDoor01",
+      "Color": { "r": 0, "g": 255, "b": 0, "a": 255 }
+    }
+  ]
+}

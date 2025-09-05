@@ -1,0 +1,10 @@
+{
+    "TextureAtlasID": "TexEntDoors",
+    "PosX": 0,
+    "PosY": 0,
+    "Width": 64,
+    "Height": 64,
+    "PivotX": 0.5,
+    "PivotY": 0.5,
+    "PixelsPerUnit": 32
+}

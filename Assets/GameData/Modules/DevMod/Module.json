@@ -1,0 +1,166 @@
+{
+    "ModuleName": "DevMod",
+    "Version": "1.0",
+    "ModuleAssets": [
+        {
+            "AssetID": "TexTilesEnv",
+            "Type": 0,
+            "AssetPath": "Modules/DevMod/TextureAtlas/TexTilesEnv.json"
+        },
+        {
+            "AssetID": "TexEntCollectables",
+            "Type": 0,
+            "AssetPath": "Modules/DevMod/TextureAtlas/TexEntCollectables.json"
+        },
+        {
+            "AssetID": "TexEntDoors",
+            "Type": 0,
+            "AssetPath": "Modules/DevMod/TextureAtlas/TexEntDoors.json"
+        },
+        {
+            "AssetID": "TexEntPlayer",
+            "Type": 0,
+            "AssetPath": "Modules/DevMod/TextureAtlas/TexEntPlayer.json"
+        },
+        {
+            "AssetID": "SpriteEnvBackWallMid01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Environment/SpriteEnvBackWallMid01.json"
+        },
+        {
+            "AssetID": "SpriteEnvBackWallTop01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Environment/SpriteEnvBackWallTop01.json"
+        },
+        {
+            "AssetID": "SpriteEnvFrontWallBtm01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Environment/SpriteEnvFrontWallBtm01.json"
+        },
+        {
+            "AssetID": "SpriteEnvFrontWallLeft01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Environment/SpriteEnvFrontWallLeft01.json"
+        },
+        {
+            "AssetID": "SpriteEnvFrontWallRight01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Environment/SpriteEnvFrontWallRight01.json"
+        },
+        {
+            "AssetID": "SpriteEnvFrontWallCrnrTL01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Environment/SpriteEnvFrontWallCrnrTL01.json"
+        },
+        {
+            "AssetID": "SpriteEnvFrontWallCrnrTR01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Environment/SpriteEnvFrontWallCrnrTR01.json"
+        },
+        {
+            "AssetID": "SpriteEnvFrontWallCrnrBL01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Environment/SpriteEnvFrontWallCrnrBL01.json"
+        },
+        {
+            "AssetID": "SpriteEnvFrontWallCrnrBR01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Environment/SpriteEnvFrontWallCrnrBR01.json"
+        },
+        {
+            "AssetID": "SpriteEnvFrontWallMid01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Environment/SpriteEnvFrontWallMid01.json"
+        },
+        {
+            "AssetID": "SpriteEnvFrontWallTop01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Environment/SpriteEnvFrontWallTop01.json"
+        },
+        {
+            "AssetID": "SpriteEnvBackWallBtm01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Environment/SpriteEnvBackWallBtm01.json"
+        },
+        {
+            "AssetID": "SpriteEnvBackWallLeft01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Environment/SpriteEnvBackWallLeft01.json"
+        },
+        {
+            "AssetID": "SpriteEnvBackWallRight01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Environment/SpriteEnvBackWallRight01.json"
+        },
+        {
+            "AssetID": "SpriteEnvBackWallCrnrTL01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Environment/SpriteEnvBackWallCrnrTL01.json"
+        },
+        {
+            "AssetID": "SpriteEnvBackWallCrnrTR01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Environment/SpriteEnvBackWallCrnrTR01.json"
+        },
+        {
+            "AssetID": "SpriteEnvBackWallCrnrBL01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Environment/SpriteEnvBackWallCrnrBL01.json"
+        },
+        {
+            "AssetID": "SpriteEnvBackWallCrnrBR01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Environment/SpriteEnvBackWallCrnrBR01.json"
+        },
+        {
+            "AssetID": "SpriteEntPlayerIdle01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Entities/SpriteEntPlayerIdle01.json"
+        },
+        {
+            "AssetID": "SpriteEntDoor01",
+            "Type": 1,
+            "AssetPath": "Modules/DevMod/Sprite/Entities/SpriteEntDoor01.json"
+        },
+        {
+            "AssetID": "MapLevel1Col",
+            "Type": 2,
+            "AssetPath": "Modules/DevMod/Maps/MapLevel1/MapLevel1Col.json"
+        },
+        {
+            "AssetID": "MapLevel1Back",
+            "Type": 2,
+            "AssetPath": "Modules/DevMod/Maps/MapLevel1/MapLevel1Back.json"
+        },
+        {
+            "AssetID": "MapLevel1Front",
+            "Type": 2,
+            "AssetPath": "Modules/DevMod/Maps/MapLevel1/MapLevel1Front.json"
+        },
+        {
+            "AssetID": "MapLevel1Ents",
+            "Type": 2,
+            "AssetPath": "Modules/DevMod/Maps/MapLevel1/MapLevel1Ents.json"
+        },
+        {
+            "AssetID": "LvlLevel01",
+            "Type": 3,
+            "AssetPath": "Modules/DevMod/Level/LvlLevel01.json"
+        },
+        {
+            "AssetID": "EntCoin",
+            "Type": 4,
+            "AssetPath": "Modules/DevMod/Entities/EntCoin.json"
+        },
+        {
+            "AssetID": "EntDoor01",
+            "Type": 4,
+            "AssetPath": "Modules/DevMod/Entities/EntDoor01.json"
+        },
+        {
+            "AssetID": "EntPlayer",
+            "Type": 4,
+            "AssetPath": "Modules/DevMod/Entities/EntPlayer.json"
+        }
+    ]
+}

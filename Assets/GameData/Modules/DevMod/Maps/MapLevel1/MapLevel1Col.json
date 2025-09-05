@@ -1,0 +1,10 @@
+{
+  "MapSource": "Modules/DevMod/Maps/MapLevel1/MapLevel1Col.png",
+  "ColorMappings": [
+    {
+      "MapID": 1,
+      "ResRefID": "Solid",
+      "Color": { "r": 255, "g": 255, "b": 255, "a": 255 }
+    }
+  ]
+}

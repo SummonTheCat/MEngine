@@ -1,0 +1,9 @@
+{
+    "LevelName": "Level 1",
+    "LevelDesc": "The first level of the game, a simple introduction.",
+    "ShowInLevelSelect": true,
+    "LevelMapCol": "MapLevel1Col",
+    "LevelMapBack": "MapLevel1Back",
+    "LevelMapFront": "MapLevel1Front",
+    "LevelMapEntities": "MapLevel1Ents"
+}

@@ -1,0 +1,15 @@
+{
+  "EntityName": "Coin",
+  "EntitySprite": "SprCoin",
+  "EntityHealth": 9999,
+  "EntitySizeWidth": 1,
+  "EntitySizeHeight": 1,
+  "EntityTags": ["Collectible", "Currency"],
+ 
+  "UsesCompCollectible": true,
+
+  "CompCollectible": {
+    "Radius": 0.3,
+    "Value": 1
+  }
+}

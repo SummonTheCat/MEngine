@@ -1,0 +1,15 @@
+{
+  "EntityName": "Door",
+  "EntitySprite": "SpriteEntDoor01",
+  "EntityHealth": 9999,
+  "EntitySizeWidth": 2,
+  "EntitySizeHeight": 2,
+  "EntityTags": ["Door", "Interactable"],
+
+  "UsesCompDoor": true,
+
+  "CompDoor": {
+    "TargetLevel": "Level02",
+    "RewardValue": 100
+  }
+}

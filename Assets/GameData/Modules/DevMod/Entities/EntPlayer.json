@@ -1,0 +1,24 @@
+{
+  "EntityName": "Player",
+  "EntitySprite": "SpriteEntPlayerIdle01",
+  "EntityHealth": 100,
+  "EntitySizeWidth": 1,
+  "EntitySizeHeight": 1,
+  "EntityTags": ["Player", "Controllable"],
+
+  "UsesCompPlayerController": true,
+  "UsesCompPhysics": true,
+
+  "CompPlayerController": {
+    "MoveSpeed": 4.0,
+    "RunSpeed": 6.0,
+    "Acceleration": 10.0,
+    "JumpHeight": 1.5
+  },
+
+  "CompPhysics": {
+    "Mass": 1.0,
+    "Drag": 0.1,
+    "Bounciness": 0.0
+  }
+}

@@ -1,0 +1,10 @@
+{
+    "TextureAtlasID": "TexTilesEnv",
+    "PosX": 32,
+    "PosY": 96,
+    "Width": 32,
+    "Height": 32,
+    "PivotX": 0.5,
+    "PivotY": 0.5,
+    "PixelsPerUnit": 32
+}

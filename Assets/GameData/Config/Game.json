@@ -1,0 +1,7 @@
+{
+    "GameName": "DefaultGame",
+    "Version": "1.0",
+    "ModulePaths": [
+        "Modules/DevMod"
+    ]
+}
