@@ -2,6 +2,7 @@ using UnityEditor;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 
 public class WinResourceViewer : EditorWindow
 {
@@ -255,6 +256,10 @@ public class WinResourceViewer : EditorWindow
             case AssetType.Entity:
                 DisplayEntityDetails(asset);
                 break;
+            case AssetType.AnimationCollection:
+                DisplayAnimationCollectionDetails(asset);
+                break;
+
             default:
                 Object obj = SysResource.Instance.GetResource<Object>(asset.AssetID);
                 if (obj != null)
@@ -419,6 +424,14 @@ public class WinResourceViewer : EditorWindow
             EditorGUILayout.LabelField("Bounciness", entity.CompPhysics.Bounciness.ToString());
         });
 
+        DrawComponentIfPresent("Animation", entity.UsesCompAnimation, entity.CompAnimation, () =>
+        {
+            EditorGUILayout.LabelField("Animation ID", entity.CompAnimation.AnimationID);
+            EditorGUILayout.LabelField("Animation Speed", entity.CompAnimation.AnimationSpeed.ToString());
+            EditorGUILayout.LabelField("Default Animation", entity.CompAnimation.DefaultAnimation);
+            EditorGUILayout.LabelField("Loop", entity.CompAnimation.Loop.ToString());
+        });
+
         DrawComponentIfPresent("Collision", entity.UsesCompCollision, entity.CompCollision, () =>
         {
             EditorGUILayout.LabelField("Width", entity.CompCollision.Width.ToString());
@@ -429,13 +442,17 @@ public class WinResourceViewer : EditorWindow
         {
             EditorGUILayout.LabelField("Radius", entity.CompDamageEmitter.Radius.ToString());
             EditorGUILayout.LabelField("Damage", entity.CompDamageEmitter.Damage.ToString());
-            EditorGUILayout.LabelField("Target Tags", entity.CompDamageEmitter.TargetTags);
+            EditorGUILayout.LabelField("Target Tags", entity.CompDamageEmitter.TargetTags != null
+                ? string.Join(", ", entity.CompDamageEmitter.TargetTags)
+                : "(none)");
+
         });
 
         DrawComponentIfPresent("Damage Receiver", entity.UsesCompDamageReceiver, entity.CompDamageReceiver, () =>
         {
-            EditorGUILayout.LabelField("Health", entity.CompDamageReceiver.Health.ToString());
-            EditorGUILayout.LabelField("Source Tags", entity.CompDamageReceiver.SourceTags);
+            EditorGUILayout.LabelField("Source Tags", entity.CompDamageReceiver.SourceTags != null
+                ? string.Join(", ", entity.CompDamageReceiver.SourceTags)
+                : "(none)");
         });
 
         DrawComponentIfPresent("Death Reward", entity.UsesCompDeathReward, entity.CompDeathReward, () =>
@@ -462,6 +479,71 @@ public class WinResourceViewer : EditorWindow
         });
     }
 
+    private void DisplayAnimationCollectionDetails(ResConfigModuleAsset asset)
+    {
+        ResCfgAnimationCollection animation = SysResource.Instance.GetResourceConfig<ResCfgAnimationCollection>(asset.AssetID);
+        if (animation == null)
+        {
+            EditorGUILayout.HelpBox("Animation config not cached.", MessageType.Warning);
+            return;
+        }
+
+        EditorGUILayout.LabelField("Animation ID", animation.AnimationID);
+        EditorGUILayout.LabelField("Frame Rate", animation.FrameRate.ToString());
+        EditorGUILayout.Space(6);
+
+        if (animation.AnimationScenes == null || animation.AnimationScenes.Length == 0)
+        {
+            EditorGUILayout.LabelField("No scenes in this animation.");
+            return;
+        }
+
+        foreach (var scene in animation.AnimationScenes)
+        {
+            EditorGUILayout.BeginVertical(EditorStyles.helpBox);
+            EditorGUILayout.LabelField($"Scene ID: {scene.SceneID}");
+            if (scene.FrameSpriteIDs == null || scene.FrameSpriteIDs.Length == 0)
+            {
+                EditorGUILayout.LabelField("No frames.");
+                EditorGUILayout.EndVertical();
+                continue;
+            }
+
+            EditorGUILayout.Space(2);
+            EditorGUILayout.LabelField("Frames:");
+            EditorGUILayout.BeginHorizontal();
+
+            foreach (string spriteID in scene.FrameSpriteIDs)
+            {
+                Sprite sprite = SysResource.Instance.GetResource<Sprite>(spriteID);
+                if (sprite != null)
+                {
+                    Rect spriteRect = sprite.rect;
+                    Texture2D cropped = new Texture2D((int)spriteRect.width, (int)spriteRect.height);
+                    Color[] pixels = sprite.texture.GetPixels(
+                        (int)spriteRect.x,
+                        (int)spriteRect.y,
+                        (int)spriteRect.width,
+                        (int)spriteRect.height
+                    );
+                    cropped.SetPixels(pixels);
+                    cropped.Apply();
+
+                    float scale = 1.5f;
+                    GUILayout.Label(cropped, GUILayout.Width(spriteRect.width * scale), GUILayout.Height(spriteRect.height * scale));
+                }
+                else
+                {
+                    EditorGUILayout.LabelField($"[Missing Sprite: {spriteID}]", GUILayout.Width(100));
+                }
+            }
+
+            EditorGUILayout.EndHorizontal();
+            EditorGUILayout.EndVertical();
+            EditorGUILayout.Space(4);
+        }
+    }
+
     private void DrawComponentIfPresent(string label, bool usageFlag, object comp, System.Action drawFields)
     {
         if (usageFlag && comp != null)
@@ -473,7 +555,6 @@ public class WinResourceViewer : EditorWindow
             EditorGUILayout.Space(4);
         }
     }
-
 
     private void DrawPerResourceControls(ResConfigModuleAsset asset)
     {
@@ -489,6 +570,29 @@ public class WinResourceViewer : EditorWindow
             Repaint();
         }
         EditorGUILayout.EndHorizontal();
+
+        EditorGUILayout.Space(4);
+
+        if (GUILayout.Button("Open Asset Location", GUILayout.Height(22)))
+        {
+            if (!string.IsNullOrEmpty(asset.AssetPath))
+            {
+                string basePath = SysResource.Instance.gameDataPath;
+                string assetPath = Path.Combine(basePath, asset.AssetPath);
+
+                assetPath = assetPath.Replace("\\", "/"); // Normalize path
+
+                Debug.Log("Opening asset location: " + assetPath);
+                EditorUtility.RevealInFinder(assetPath);
+
+            }
+            else
+            {
+                EditorUtility.DisplayDialog("Invalid Path",
+                    "This asset does not have a valid path.",
+                    "OK");
+            }
+        }
     }
 
     private void DrawScaledPreview(Texture2D tex, int width, int height)

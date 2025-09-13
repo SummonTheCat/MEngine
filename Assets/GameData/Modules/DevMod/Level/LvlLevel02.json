@@ -1,0 +1,9 @@
+{
+    "LevelName": "Level 2",
+    "LevelDesc": "The second level of the game, introducing new challenges.",
+    "ShowInLevelSelect": false,
+    "LevelMapCol": "MapLevel2Col",
+    "LevelMapBack": "MapLevel2Back",
+    "LevelMapFront": "MapLevel2Front",
+    "LevelMapEntities": "MapLevel2Ents"
+}

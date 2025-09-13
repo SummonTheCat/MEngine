@@ -1,0 +1,50 @@
+{
+  "MapSource": "Modules/DevMod/Maps/MapLevel2/MapLevel2Back.png",
+  "ColorMappings": [
+    {
+      "MapID": 0,
+      "ResRefID": "SpriteEnvBackWallMid01",
+      "Color": { "r": 255, "g": 0, "b": 0, "a": 255 }
+    },
+    {
+      "MapID": 1,
+      "ResRefID": "SpriteEnvBackWallTop01",
+      "Color": { "r": 0, "g": 255, "b": 0, "a": 255 }
+    },
+    {
+      "MapID": 2,
+      "ResRefID": "SpriteEnvBackWallBtm01",
+      "Color": { "r": 0, "g": 0, "b": 255, "a": 255 }
+    },
+    {
+      "MapID": 3,
+      "ResRefID": "SpriteEnvBackWallLeft01",
+      "Color": { "r": 255, "g": 255, "b": 0, "a": 255 }
+    },
+    {
+      "MapID": 4,
+      "ResRefID": "SpriteEnvBackWallRight01",
+      "Color": { "r": 0, "g": 255, "b": 255, "a": 255 }
+    },
+    {
+      "MapID": 5,
+      "ResRefID": "SpriteEnvBackWallCrnrTL01",
+      "Color": { "r": 100, "g": 0, "b": 0, "a": 255 }
+    },
+    {
+      "MapID": 6,
+      "ResRefID": "SpriteEnvBackWallCrnrTR01",
+      "Color": { "r": 0, "g": 100, "b": 0, "a": 255 }
+    },
+    {
+      "MapID": 7,
+      "ResRefID": "SpriteEnvBackWallCrnrBL01",
+      "Color": { "r": 0, "g": 0, "b": 100, "a": 255 }
+    },
+    {
+      "MapID": 8,
+      "ResRefID": "SpriteEnvBackWallCrnrBR01",
+      "Color": { "r": 100, "g": 100, "b": 0, "a": 255 }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+    "LevelName": "Level 3",
+    "LevelDesc": "A newly created level.",
+    "ShowInLevelSelect": true,
+    "LevelMapCol": "MapLevel3Col",
+    "LevelMapBack": "MapLevel3Back",
+    "LevelMapFront": "MapLevel3Front",
+    "LevelMapEntities": "MapLevel3Ents"
+}

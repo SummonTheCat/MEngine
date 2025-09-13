@@ -1,0 +1,14 @@
+{
+    "AnimationID": "AnimWindow",
+    "AnimationScenes": [
+        {
+            "SceneID": "Idle",
+            "FrameSpriteIDs": [
+                "SpriteEntWindow01",
+                "SpriteEntWindow02",
+                "SpriteEntWindow03"
+            ]
+        }
+    ],
+    "FrameRate": 3
+}

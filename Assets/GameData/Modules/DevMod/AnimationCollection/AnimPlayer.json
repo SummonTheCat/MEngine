@@ -1,0 +1,41 @@
+{
+    "AnimationID": "AnimPlayer",
+    "AnimationScenes": [
+        {
+            "SceneID": "Idle",
+            "FrameSpriteIDs": [
+                "SpriteEntPlayerWalk01"
+            ]
+        },
+        {
+            "SceneID": "Walk",
+            "FrameSpriteIDs": [
+                "SpriteEntPlayerWalk02",
+                "SpriteEntPlayerWalk03",
+                "SpriteEntPlayerWalk04",
+                "SpriteEntPlayerWalk05",
+                "SpriteEntPlayerWalk06",
+                "SpriteEntPlayerWalk07",
+                "SpriteEntPlayerWalk08",
+                "SpriteEntPlayerWalk01"
+            ]
+        },
+        {
+            "SceneID": "Dead",
+            "FrameSpriteIDs": [
+                "SpriteEntPlayerHurt01",
+                "SpriteEntPlayerHurt02"
+            ]
+        },
+        {
+            "SceneID": "Hurt",
+            "FrameSpriteIDs": [
+                "SpriteEntPlayerWalk02",
+                "SpriteEntPlayerHurt01",
+                "SpriteEntPlayerWalk06",
+                "SpriteEntPlayerHurt02"
+            ]
+        }
+    ],
+    "FrameRate": 8
+}

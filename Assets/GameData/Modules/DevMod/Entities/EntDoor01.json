@@ -4,12 +4,13 @@
   "EntityHealth": 9999,
   "EntitySizeWidth": 2,
   "EntitySizeHeight": 2,
+  "EntityLayer": 5,
   "EntityTags": ["Door", "Interactable"],
 
   "UsesCompDoor": true,
 
   "CompDoor": {
-    "TargetLevel": "Level02",
+    "TargetLevel": "LvlLevel02",
     "RewardValue": 100
   }
 }

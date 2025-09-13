@@ -10,6 +10,11 @@
       "MapID": 1,
       "ResRefID": "EntDoor01",
       "Color": { "r": 0, "g": 255, "b": 0, "a": 255 }
+    },
+    {
+      "MapID": 2,
+      "ResRefID": "EntWindow",
+      "Color": { "r": 0, "g": 255, "b": 255, "a": 255 }
     }
   ]
 }

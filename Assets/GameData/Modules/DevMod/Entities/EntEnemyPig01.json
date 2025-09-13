@@ -1,0 +1,86 @@
+{
+    "EntityName": "EnemyPig",
+    "EntitySprite": "SpriteEntPigWalk03",
+    "EntityHealth": 10.0,
+    "EntitySizeWidth": 1,
+    "EntitySizeHeight": 1,
+    "EntityLayer": 2,
+    "EntityTags": [
+        "AI",
+        "Enemy"
+    ],
+    "UsesCompPlayerController": false,
+    "UsesCompAI": true,
+    "UsesCompPhysics": true,
+    "UsesCompCollision": false,
+    "UsesCompAnimation": true,
+    "UsesCompDamageEmitter": true,
+    "UsesCompDamageReceiver": true,
+    "UsesCompDeathReward": false,
+    "UsesCompCollectible": false,
+    "UsesCompSpawner": false,
+    "UsesCompDoor": false,
+    "CompPlayerController": {
+        "MoveSpeed": 0.0,
+        "RunSpeed": 0.0,
+        "JumpHeight": 0.0,
+        "JumpHeightMax": 0.0,
+        "Acceleration": 0.0,
+        "Deceleration": 0.0,
+        "AirDeceleration": 0.0,
+        "JumpHoldTime": 0.15000000596046449,
+        "HeldGravityScale": 0.3499999940395355,
+        "FallGravityScale": 1.600000023841858
+    },
+    "CompAI": {
+        "Type": 0,
+        "MoveSpeed": 3.0
+    },
+    "CompPhysics": {
+        "Mass": 1.0,
+        "Drag": 0.10000000149011612,
+        "Bounciness": 0.004999999888241291
+    },
+    "CompCollision": {
+        "Width": 0.0,
+        "Height": 0.0
+    },
+    "CompAnimation": {
+        "AnimationID": "AnimPig",
+        "AnimationSpeed": 1.0,
+        "DefaultAnimation": "Idle",
+        "Loop": true
+    },
+    "CompDamageEmitter": {
+        "Radius": 1.0,
+        "Damage": 10.0,
+        "TargetTags": [
+            "Player"
+        ],
+        "damageDirUp": false,
+        "damageDirDown": true,
+        "damageDirLeft": true,
+        "damageDirRight": true
+    },
+    "CompDamageReceiver": {
+        "SourceTags": [
+            "Player"
+        ],
+        "InvulnerabilityTime": 1.0
+    },
+    "CompDeathReward": {
+        "Value": 0
+    },
+    "CompCollectible": {
+        "Radius": 0.0,
+        "Value": 0
+    },
+    "CompSpawner": {
+        "SpawnRate": 0.0,
+        "SpawnedEntity": ""
+    },
+    "CompDoor": {
+        "TargetLevel": "",
+        "RewardValue": 0
+    }
+}

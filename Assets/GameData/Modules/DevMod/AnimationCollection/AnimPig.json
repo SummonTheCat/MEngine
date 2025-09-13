@@ -1,0 +1,39 @@
+{
+    "AnimationID": "AnimPig",
+    "AnimationScenes": [
+        {
+            "SceneID": "Idle",
+            "FrameSpriteIDs": [
+                "SpriteEntPigWalk03"
+            ]
+        },
+        {
+            "SceneID": "Walk",
+            "FrameSpriteIDs": [
+                "SpriteEntPigWalk01",
+                "SpriteEntPigWalk02",
+                "SpriteEntPigWalk03",
+                "SpriteEntPigWalk04",
+                "SpriteEntPigWalk05",
+                "SpriteEntPigWalk06"
+            ]
+        },
+        {
+            "SceneID": "Hurt",
+            "FrameSpriteIDs": [
+                "SpriteEntPigHurt01",
+                "SpriteEntPigWalk03",
+                "SpriteEntPigHurt02",
+                "SpriteEntPigWalk06"
+            ]
+        },
+        {
+            "SceneID": "Dead",
+            "FrameSpriteIDs": [
+                "SpriteEntPigHurt01",
+                "SpriteEntPigHurt02"
+            ]
+        }
+    ],
+    "FrameRate": 8
+}

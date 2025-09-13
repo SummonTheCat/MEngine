@@ -1,24 +1,86 @@
 {
-  "EntityName": "Player",
-  "EntitySprite": "SpriteEntPlayerIdle01",
-  "EntityHealth": 100,
-  "EntitySizeWidth": 1,
-  "EntitySizeHeight": 1,
-  "EntityTags": ["Player", "Controllable"],
-
-  "UsesCompPlayerController": true,
-  "UsesCompPhysics": true,
-
-  "CompPlayerController": {
-    "MoveSpeed": 4.0,
-    "RunSpeed": 6.0,
-    "Acceleration": 10.0,
-    "JumpHeight": 1.5
-  },
-
-  "CompPhysics": {
-    "Mass": 1.0,
-    "Drag": 0.1,
-    "Bounciness": 0.0
-  }
+    "EntityName": "Player",
+    "EntitySprite": "SpriteEntPlayerWalk01",
+    "EntityHealth": 30.0,
+    "EntitySizeWidth": 1,
+    "EntitySizeHeight": 1,
+    "EntityLayer": 1,
+    "EntityTags": [
+        "Player",
+        "Controllable"
+    ],
+    "UsesCompPlayerController": true,
+    "UsesCompAI": false,
+    "UsesCompPhysics": true,
+    "UsesCompCollision": false,
+    "UsesCompAnimation": true,
+    "UsesCompDamageEmitter": true,
+    "UsesCompDamageReceiver": true,
+    "UsesCompDeathReward": false,
+    "UsesCompCollectible": false,
+    "UsesCompSpawner": false,
+    "UsesCompDoor": false,
+    "CompPlayerController": {
+        "MoveSpeed": 4.0,
+        "RunSpeed": 5.0,
+        "JumpHeight": 1.5,
+        "JumpHeightMax": 3.5,
+        "Acceleration": 10.0,
+        "Deceleration": 15.0,
+        "AirDeceleration": 20.0,
+        "JumpHoldTime": 0.15000000596046449,
+        "HeldGravityScale": 0.14000000059604646,
+        "FallGravityScale": 1.600000023841858
+    },
+    "CompAI": {
+        "Type": 0,
+        "MoveSpeed": 0.0
+    },
+    "CompPhysics": {
+        "Mass": 1.0,
+        "Drag": 0.10000000149011612,
+        "Bounciness": 0.004999999888241291
+    },
+    "CompCollision": {
+        "Width": 0.0,
+        "Height": 0.0
+    },
+    "CompAnimation": {
+        "AnimationID": "AnimPlayer",
+        "AnimationSpeed": 1.0,
+        "DefaultAnimation": "Idle",
+        "Loop": true
+    },
+    "CompDamageEmitter": {
+        "Radius": 1.0,
+        "Damage": 50.0,
+        "TargetTags": [
+            "Enemy"
+        ],
+        "damageDirUp": false,
+        "damageDirDown": true,
+        "damageDirLeft": false,
+        "damageDirRight": false
+    },
+    "CompDamageReceiver": {
+        "SourceTags": [
+            "Enemy"
+        ],
+        "InvulnerabilityTime": 1.0
+    },
+    "CompDeathReward": {
+        "Value": 0
+    },
+    "CompCollectible": {
+        "Radius": 0.0,
+        "Value": 0
+    },
+    "CompSpawner": {
+        "SpawnRate": 0.0,
+        "SpawnedEntity": ""
+    },
+    "CompDoor": {
+        "TargetLevel": "",
+        "RewardValue": 0
+    }
 }

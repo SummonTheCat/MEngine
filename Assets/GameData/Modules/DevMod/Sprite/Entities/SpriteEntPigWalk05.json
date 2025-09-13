@@ -1,0 +1,10 @@
+{
+    "TextureAtlasID": "TexEntPigEnemy",
+    "PosX": 128,
+    "PosY": 0,
+    "Width": 32,
+    "Height": 32,
+    "PivotX": 0.5,
+    "PivotY": 0.5,
+    "PixelsPerUnit": 32.0
+}

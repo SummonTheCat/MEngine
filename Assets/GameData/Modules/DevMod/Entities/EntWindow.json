@@ -1,0 +1,19 @@
+{
+  "EntityName": "Window",
+  "EntitySprite": "SpriteEntWindow01",
+  "EntityHealth": 9999,
+  "EntitySizeWidth": 1,
+  "EntitySizeHeight": 2,
+  "EntityLayer": 5,
+  "EntityTags": ["Window", "Animated"],
+
+  "UsesCompAnimation": true,
+
+  "CompAnimation": {
+    "AnimationID" : "AnimWindow",
+    "DefaultAnimation" : "Idle",
+    "AnimationSpeed" : 1.0,
+    "Loop" : true
+  }
+
+}
